@@ -48,6 +48,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         spinQuantidadeLados = new javax.swing.JSpinner();
         painelCorContorno = new javax.swing.JPanel();
         painelCorPreenchimento = new javax.swing.JPanel();
+        btnRetornar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Meu Paint");
@@ -145,6 +146,13 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addGap(0, 18, Short.MAX_VALUE)
         );
 
+        btnRetornar.setText("Retornar");
+        btnRetornar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRetornarMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelFerramentasLayout = new javax.swing.GroupLayout(painelFerramentas);
         painelFerramentas.setLayout(painelFerramentasLayout);
         painelFerramentasLayout.setHorizontalGroup(
@@ -165,10 +173,12 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(spinQuantidadeLados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRetornar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(painelCorContorno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(painelCorPreenchimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(195, Short.MAX_VALUE))
+                .addGap(17, 17, 17))
         );
         painelFerramentasLayout.setVerticalGroup(
             painelFerramentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,7 +193,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                     .addComponent(painelCorContorno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painelCorPreenchimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEstrela)
-                    .addComponent(spinQuantidadeLados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(spinQuantidadeLados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRetornar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -276,6 +287,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_painelCorPreenchimentoMouseClicked
 
+    private void btnRetornarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRetornarMouseClicked
+          painelDesenho.removerUltimaForma();
+    }//GEN-LAST:event_btnRetornarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -294,6 +309,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JToggleButton btnLinha;
     private javax.swing.JToggleButton btnPoligono;
     private javax.swing.JToggleButton btnRetangulo;
+    private javax.swing.JButton btnRetornar;
     private javax.swing.JToggleButton btnTriangulo;
     private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.JPanel painelCorContorno;

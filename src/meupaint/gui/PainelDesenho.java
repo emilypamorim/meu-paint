@@ -58,4 +58,11 @@ public class PainelDesenho extends JPanel {
         this.formaTemporaria = formaTemporaria;
     }
     
+    public void removerUltimaForma(){
+        if (!formas.isEmpty()) {
+            formas.remove(formas.size() - 1);
+            repaint();
+        }
+    }
+    
 }

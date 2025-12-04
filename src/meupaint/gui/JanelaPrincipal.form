@@ -96,10 +96,12 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="spinQuantidadeLados" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btnRetornar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="painelCorContorno" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="painelCorPreenchimento" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="195" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -117,6 +119,7 @@
                       <Component id="painelCorPreenchimento" alignment="2" min="-2" max="-2" attributes="0"/>
                       <Component id="btnEstrela" alignment="2" min="-2" max="-2" attributes="0"/>
                       <Component id="spinQuantidadeLados" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnRetornar" alignment="2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -254,6 +257,14 @@
             </DimensionLayout>
           </Layout>
         </Container>
+        <Component class="javax.swing.JButton" name="btnRetornar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Retornar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnRetornarMouseClicked"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
